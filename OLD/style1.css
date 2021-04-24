@@ -1,0 +1,99 @@
+/*Etiquetas*/
+body{
+    background-color: aquamarine;
+    ;
+}
+
+footer{
+    background-color:black;
+    color: white;
+    left: 0; /*posicionate a la izquierda en el pixel 0*/
+    bottom: 0; /*y abajo en el pixel 0 también*/
+    position: fixed; /*fixed significa que va a ir donde le digamos*/
+    width: 100%; /*Aquí decimos que el ancho se abra de tope a tope el 100% de la pagina*/
+    text-align: center; /*Aqui decimos que todo el texto que se encuentre dentro del footer, este en el centro*/
+    font-size: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+input[type="text"], input[type="date"], input[type="file"], input[type="number"], input[type="password"]{ /*le estamos dando un estilo a cada uno de los input*/
+    width: 100%; /*que tenga un ancho del 100% y sera del ancho del contenedor div id= "formulario"*/ 
+    border-radius: 10px; /*le damos un borde a nuestro input*/
+    padding: 10px; /*margen hacia dentro*/
+    margin-top: 5px;
+    margin-bottom: 15px; /*quiero que el margen hacia abajo sea de 15 pixeles*/
+    box-sizing: border-box; /*quiero que tenga un borde*/
+    border: 1px solid gray; /*quiero que el borde tenga un color*/
+    resize: vertical; /*ordenara todos los input en formato vertical*/   
+    font-size: 20px; /*cambio el tamaño de la letra de ingreso de datos*/
+
+} 
+
+/*clase tipo id*/
+#Formulario { /*se antecede de un gato*/
+    width: 50%; /*este formulario quiero que sea el 50% de la pagina completa*/
+    margin: auto; /*da margen parejo al div del formulario a los cuatro lados*/
+    padding: 20px; /*margen interno*/
+    background-color: rgb(63, 226, 218);
+    border-radius: 15px;
+    
+    
+}
+
+#titulo {
+    color: rgb(7, 68, 68);
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+}
+
+/*Class*/
+.navbar{
+    background-color: black;
+    width: 100%; /*decimos que siempre este expandido*/
+    overflow: auto; /*hace que se pongan por encima las cosas*/
+}
+
+.navbar a { /*dentro del natvar tenemos las etiquetas y las llamamos para modificarlas*/
+    color: white; /*quiero que el color de la etiqueta sea blanco*/
+    font-size: 22px; /*la letra quiero que sea de 20 pixeles*/
+    text-decoration: none; /*Con esto eliminamos la linea de abajo del link*/
+    padding: 10px; /*El padding es el margen de adentro*/
+    float: left; /*Aqui decimos que los elementos se posicionen a la izquierda*/
+
+}
+
+.navbar a:hover{ /*Hover es cuando posicianamos el mouse por encima esta en casi todos los lenguajes de programación*/
+    background-color: gray;
+}
+
+.activo{
+    background-color: gray;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;  /*cursor con apariencia de mano cuando pasamos por encima*/ 
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btnverde {
+    background-color: rgb(32, 110, 78);   
+}
+
+.btnverde:hover{
+    background-color: rgb(15, 92, 36);   
+}
+
+.btnazul {
+    background-color: rgb(21, 196, 181);    
+}
+
+.btnazul:hover{
+    background-color: rgb(70, 111, 128);    
+}

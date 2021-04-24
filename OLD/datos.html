@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase3</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="datos.html" class="activo">DATOS</a>
+        <a href="recibo.html">RECIBO</a>
+    </div>
+
+    <h1 id="titulo">INGRESO DE MASCOTAS</h1>
+
+    <div id="contenido">
+        <!--Inicio formulario-->
+        <div id="Formulario">
+            <form action="recibo.html" method="GET"> <!--Action = es donde se envia - Method = el metodo de envio-->
+
+                <label for="txtNombre">Nombre del perrito</label> <!--el for hace link con el input-->
+                <input type="text" name="txtNombre" id="txtNombre">
+
+                <label for="txtDueño">Nombre del dueño</label>
+                <input type="text" name="txtDueño" id="txtDueño">
+
+                <label for="txtFecha">Fecha Nacimiento</label>
+                <input type="date" name="txtFecha" id="txtFecha">
+
+                <label for="txtImagen">Imagen del Perrito</label>
+                <input type="file" name="txtImagen" id="txtImagen">
+
+                <label for="txtEdad">Edad del Perrito</label>
+                <input type="number" name="txtEdad" id="txtEdad">
+
+                <label for="txtPass">Contraseña</label>
+                <input type="password" name="txtPass" id="txtPass">
+
+                <input type="submit" name="btnEnviar" class="btn btnverde"><!--Es el botón que va a enviar el formulario completo-->
+                <input type="reset" name="btnLimpiar" class="btn btnazul">
+
+            </form>
+        </div>
+        <!--Fin formulario-->
+    </div>
+
+    <footer>
+        <div id="piedepagina">
+            <h2>Pagina creada por Francisco Camus 2021</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

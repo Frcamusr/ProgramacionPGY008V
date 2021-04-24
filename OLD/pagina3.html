@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase3</title>
+</head>
+<body style="background-color: rgb(11, 238, 162);">
+    <!--ul>li*4>a--  <!--ecuación que creara una lista desordenada de cuatro elementos con la letra a-->
+    <!--table>tr*5>td*4>a <!--ecuación que creara una tabla de cinco filas y cuatro columnas con una a dentro-->
+    <!-- Un formulario se puede enviar de dos formas por GET o por POST
+    GET: Se ve la información por la URL (se usa para testar)
+    POST: Es el metodo final para el usuario (No se ve la información por la URL)
+    -->
+
+    <!--Inicio formulario-->
+    <div>
+        <form action="recibo.html" method="POST"> <!--Action = es donde se envia - Method = el metodo de envio-->
+            <table>
+                <tr>
+                    <td>Nombre del perrito</td>
+                    <td><input type="text" name="txtNombre" id="txtNombre"></td>
+                </tr>
+                <tr>
+                    <td>Nombre del dueño</td>
+                    <td><input type="text" name="txtDueño" id="txtDueño"></td>
+                </tr>
+                <tr>
+                    <td>Fecha Nacimiento</td>
+                    <td><input type="date" name="txtFecha" id="txtFecha"></td>
+                </tr>
+                <tr>
+                    <td>Imagen del Perrito</td>
+                    <td><input type="file" name="txtImagen" id="txtImagen"></td>
+                </tr>
+                <tr>
+                    <td>Edad del Perrito</td>
+                    <td><input type="number" name="txtEdad" id="txtEdad"></td>
+                </tr>
+                <tr>
+                    <td>Contraseña</td>
+                    <td><input type="password" name="txtPass" id="txtPass"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="btnEnviar" id="btnEnviar"><!--Es el botón que va a enviar el formulario completo-->
+                        <input type="reset" name="btnLimpiar" id="btnLimpiar">
+                    </td>
+                </tr>
+            </table>                     
+        </form>
+    </div>
+    <!--Fin formulario-->
+
+</body>
+</html>

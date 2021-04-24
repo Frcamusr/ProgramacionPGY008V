@@ -1,0 +1,72 @@
+body {
+    background-color: burlywood; /*pinto el fondo de la pagina*/
+}
+
+.container {
+    width: 500px;  /*de ancho unos 500 pixeles*/
+    height: 200px; /*de alto unos 200 pixeles*/
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+
+    display: -webkit-flex; /*me permite ejecutar el flexbox en safari y chrome*/
+    display: -ms-flexbox; /*permite ejecutar el flex en internet explorer*/
+    display: flex; /*que sea una caja en linea flexible*/ /*flex hace inecesario poner el comando flex-direction y justify-content por que lo hace automatico*/
+
+    align-content: flex-start;
+    
+
+    /* flex-direction: 
+    1- row: se alinea en formato horizontal dentro del contenedor.
+    2- column: se alinea en formato vertical dentro del contenedor.
+    3- row-reverse: se alinea en formato horizontal de derecha a izquierda.
+    4- column-reverse: se alinea de forma vertical de abajo hacia arriba.*/
+    
+    /* flex-wrap:
+    1- wrap: Posiciona todos los elementos dentro del contenedor.
+    2- no-wrap | wrap | wrap-reverse; */
+
+    /* justify-content:
+    1- flex-end: toma todo mi contenido y lo posiciona al final.
+    2- flex-start: toma todo mi contenido y lo posiciona al inicio.
+    3- center: toma todo mi contenido y lo posiciona en el centro.
+    4- space-around: Nos da espacio en ambos lados.
+    5- space-between: Nos da un espacio similar entre todos los elementos de principio a fin de la página.*/ 
+
+    /* align-items:
+    1- flex-start: Alineamos al comienzo.
+    2- flex-end: Alineamos al final de nuestra página en la misma linea.
+    3- center: alineamos en el centro de la fila que estaba.  
+    4- stretch: se alarga al 100% del contenedor.
+    5- baseline: ordena todos los items parejos segun sus letras.
+    6- space-between: Nos da un espacio similar entre todos los elementos de principio a fin de la página.
+    7- space-around: Nos da espacio en ambos lados.*/
+    
+     /* align-items: center GRUPOS DE ELEMENTOS DE UNA SOLA FILA */  
+    
+     /* align-content: space-between; /* GRUPOS DE ELEMENTOS DE MAS FILAS - wrap */
+}
+
+.caja {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    margin: 10px;
+}
+
+.caja1{
+    order: 1;
+}
+
+.caja2 {
+    order: 2;
+}
+
+.caja3 {
+    order: 3;
+}
+
+.caja4 {
+    order: 4;
+}
