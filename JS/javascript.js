@@ -88,3 +88,8 @@ inputs.forEach((input) => { //Arreglo que recorre todos los inputs
     input.addEventListener('keyup' , validar); //Cuando el usuario presione una tecla yo quiero llamar al validar
     input.addEventListener('blur' , validar);
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems);
+  });

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Para Mascotas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css"><!--esto lo podriamos meter dentro de nuestra carpeta css-->
+</head>
+
+<body>
+    <div class="container">
+        <header><!--cabecera de mi página-->
+            <div class="logo">
+                <img src="IMG/dog (4).png" width="70" alt="logo perro"> 
+            </div>
+            <nav>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#categorias">Categorias</a></li> 
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#ingresar">Ingresar</a></li>
+                <li><a href="registrarse.html">Registrárme</a></li>
+            </nav>
+        </header>
+
+        <section class="banner">
+            <div class="banner-img"></div>
+            <h1>Mascota Land</h1>
+            <h2>Wellcome!!</h2>
+            <!--<a href="" class="banner-btn">Contacto</a>-->
+        </section>
+
+        <section class="categorias" id="categorias">
+            <h3 class="categorias-titulo">Categorias</h3>
+            <ul class="categorias-contenido">
+                <li class="categorias-izq">
+                    <p>Correas para Perro</p>
+                </li><!--Ordenamos el contenido a la izquierda-->
+                <li class="categorias-der"><!--Ordenamos el contenido a la Derecha-->
+                    
+                    <a href="" class="categorias-btn">Información</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="servicios" id="servicios">
+            <h3 class="servicios-titulo">Servicios</h3>
+            <ul class="servicios-contenido">
+                <li>
+                    <i class="fas fa-cat"></i><!--Icono de un gato-->
+                    <h4>Servicio 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cupiditate quod repellendus consectetur magni asperiores accusantium, tenetur voluptatem amet rerum explicabo, autem accusamus consequuntur. At vero earum temporibus magnam corporis consectetur, blanditiis exercitationem eligendi, quasi nostrum voluptatem nobis error, neque enim odio cum. Excepturi aspernatur dolorem consequatur, cumque fugiat assumenda dolorum quod facilis consequuntur veniam sapiente, voluptate ad aperiam dolores porro dolore! Possimus est dicta consectetur ab, molestias accusantium natus! Ea, dolorem veritatis. Doloribus vero iure veniam, corrupti saepe atque, amet odit, soluta nam magnam ipsa voluptatibus qui excepturi! Ullam fugit nobis excepturi iure fugiat temporibus voluptatibus quos reprehenderit provident?</p>                </li>
+                <li>
+                    <i class="fas fa-paw"></i>
+                    <h4>Servicio 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magni reiciendis culpa modi cumque hic dicta earum distinctio corrupti harum saepe doloremque iusto in obcaecati eum quis, pariatur beatae laudantium, animi adipisci recusandae quia illo nihil facilis? Inventore necessitatibus alias blanditiis dolorem eveniet hic suscipit sequi maxime nesciunt deserunt, nobis, repudiandae omnis pariatur sapiente, commodi aspernatur. Nulla ad ipsum numquam, voluptatum quod harum accusantium quasi tempora? Possimus saepe placeat animi aut esse quaerat quas dolorum recusandae suscipit quisquam corporis illo, quo provident doloremque temporibus ut quos? Est, corrupti. Placeat tenetur reprehenderit sint quos deserunt molestiae fuga nobis possimus quas quo.</p>
+                </li>
+                <li>
+                    <i class="fab fa-cc-paypal"></i>
+                    <h4>Servicio 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cupiditate quod repellendus consectetur magni asperiores accusantium, tenetur voluptatem amet rerum explicabo, autem accusamus consequuntur. At vero earum temporibus magnam corporis consectetur, blanditiis exercitationem eligendi, quasi nostrum voluptatem nobis error, neque enim odio cum. Excepturi aspernatur dolorem consequatur, cumque fugiat assumenda dolorum quod facilis consequuntur veniam sapiente, voluptate ad aperiam dolores porro dolore! Possimus est dicta consectetur ab, molestias accusantium natus! Ea, dolorem veritatis. Doloribus vero iure veniam, corrupti saepe atque, amet odit, soluta nam magnam ipsa voluptatibus qui excepturi! Ullam fugit nobis excepturi iure fugiat temporibus voluptatibus quos reprehenderit provident?</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="ingresar" id="ingresar">
+            <h3 class="ingresar-titulo">Ingresar</h3>
+            <ul class="ingresar-contenido">
+                <li class="ingresar-izq">
+                    <!--Inicio formulario-->
+                    <div id="Formulario">
+                        <form action="recibo.html" method="GET"><!--Action = es donde se envia - Method = el metodo de envio-->
+                            <label for="txtNombreUsuario">Nombre De Usuario</label><!--el for hace link con el input-->
+                            <input type="text" name="txtNombreUsuario" id="txtNombreUsuario">
+
+                            <label for="txtPass">Contraseña</label>
+                            <input type="password" name="txtPass" id="txtPass">
+
+                            <a href="#ingresar" class="restaurarcontraseña">¿Has olvidado tu contraseña?</a>
+                            <a href="#ingresar" class="iniciarsesion-btn">Iniciar sesion</a>
+                        </form>
+                    </div>
+                    <!--Fin formulario-->
+                </li>
+                <li class="ingresar-der">
+                    <h2>¿Es tu primera vez en la tienda?</h2>
+                    <br>
+                    <p>Crea tu cuenta fácil y rapido. Realiza tus compras sin perder tiempo.</p>
+                    <p>1- Pago más rapido.</p>
+                    <p>2- Seguimiento del despacho de la venta.</p>
+                    <p>3- 5% de descuento en el total de la venta.</p>  
+                    <br>
+                    <a href="registrarse.html" class="crearcuenta-btn">Crear Cuenta</a>
+                    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.190091360862!2d-70.57857902404234!3d-33.59838223133895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x893f58a1479b8f82!2sDuoc%20UC%3A%20Sede%20Puente%20Alto!5e0!3m2!1ses-419!2s!4v1618250054417!5m2!1ses-419!2s" width="550" height="580" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <!--Con iframe estamos insertando elementos de otra página-->
+                </li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>TODOS LOS DERECHOS RESERVADOS A MIS MASCOTAS @COPYRYGHT 2021</p>
+        </footer>
+    </div>
+
+    
+    <!--Fin código-->
+
+
+
+
+
+    <!--inicio scripts de integración-->
+    <script src="JS/javascript.js"></script><!-- aquí estoy llamando al archivo de javascript y trabajaremos con expresiones regulares-->
+    <!-- jQuery library -->
+    <!-- Todos los estilos van arriba aquí todos los javascripts esto es una buena practica -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+    
+</body>
+
+</html>
+
+<!--Agregar quienes somos y contacto-->

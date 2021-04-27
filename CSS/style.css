@@ -479,7 +479,7 @@ input[type="text"], input[type="date"], input[type="file"], input[type="number"]
 
 
 /* Footer */
-footer { /*Las eticketas solo se llaman con el nombre*/ /*con el punto son clases y cuando se usa el gato# es para usar el ID 
+footer { /*Las etiquetas solo se llaman con el nombre*/ /*con el punto son clases y cuando se usa el gato# es para usar el ID 
    /* FLEX */ /*ahora sera un contenedor flexible*/
    display: -webkit-flex; /*compatible con chrome y safari*/
    display: -moz-flex; /*compatible con mozila*/
@@ -514,4 +514,25 @@ footer { /*Las eticketas solo se llaman con el nombre*/ /*con el punto son clase
     
 
 }
+/*Link de las tarjetas*/
+.card-content p a {
+    color: rgb(104, 92, 92);
+}
+
+.card-content p a:hover {
+    color: rgb(4, 194, 137);
+}
+/*Fin del Link de las tarjetas*/
+
+/*Boton has olvidado tu contraseña? */
+#modal1 #olvidecontraseña a {
+    color: black;
+    font-size: 16px;
+}
+
+#modal1 #olvidecontraseña a:hover {
+    color: rgb(133, 97, 40);
+}
+/*Fin Boton has olvidado tu contraseña? */
+
 
