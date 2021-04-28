@@ -6,89 +6,215 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Mascota Land</a>2
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">INICIO</a>
-                </li>
+    <!--Inicio navbar-->
+    <nav>
+        <div class="nav-wrapper blue darken-2">
+            <a href="#!" class="brand-logo">
+                <div class="logo">
+                    <img src="IMG/dog (4).png" width="60" alt="logo perro">
+                </div>
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <a class="waves-effect waves-light btn-small modal-trigger" href="#modal1">Iniciar sesión</a>
             </ul>
         </div>
     </nav>
 
-    <div class="jumbotron text-center">
-        <h1 id="titulo_jumbotron">Registrárme</h1><!--Los elementos que queramos trabajar con javascript es recomendable usarlos con id-->
-        <p id="texto_jumbotron">Al registrarte podras acceder a todos los servicios</p>
-    </div>
+    <ul class="sidenav blue lighten-4" id="mobile-demo">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Iniciar sesión</a></li>
+        <!--cambiamos por un boton modal-->
+    </ul>
+    <!--Fin navbar-->
 
-    <div class="container">
-        <!--Contenedor con margenes.  container-fluid es sin margen a los lados-->
-        <div class="row">
-            <div class="col-sm-2">
-                <!--Columna para dar un espacio a la izquierda-->
+    <!--comienzo del javascript collapse responsive de nuestro navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems,);
+        });
+    </script>
+    <!--Fin del javascript collapse-->
+
+    <!--cuerpo del botón modal dentro del navbar -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <!--Comienzo del formulario dentro del botón modal-->
+            <h3 class="center">Iniciar sesión</h3>
+            <br>
+            <div class="row">
+                <form class="col s10">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">person</i>
+                            <input placeholder="Introduce tu Nombre de usuario " id="nombedeusuario" type="text"
+                                class="validate">
+                            <label for="first_name">Nombre de Usuario</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Contraseña</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="col-sm-8"><!--Columna central-->
-                <div>
-                    <form action="recibo.html" method="GET" id="formulario"> <!--Action = es donde se envia - Method = el metodo de envio-->
-                        <div class="form-group">
-                            <label for="txtNombre">Nombre de Usario *</label><!--el for hace link con el input--> <!--En bootstrap estos dos elementos conforman un grupo por eso los alínea class= "form-control" -->
-                            <input class= "form-control" type="text" name="txtNombre" id="txtNombre" minlength="2" maxlength="10" required> <!--minlength="2" maxlength="10" minimo y maximo de caracteres permitidos-->
-                        </div>
-
-                        <div class="form-group">
-                            <label for="txtCorreo">Correo Electrónico *</label>
-                            <input class= "form-control" type="text" name="txtCorreo" id="txtCorreo" required> <!--required tienes que llenar el campo por obligación-->
-                        </div>
-
-                        <div class="form-group">
-                            <label for="txtPass">Contraseña *</label>
-                            <input class= "form-control" type="password" name="txtPass" id="txtPass" required> 
-                        </div>
-
-                        <p>Sus datos personales se utilizarán para procesar su pedido, respaldar su experiencia en este sitio web y para otros fines descritos en nuestras <a href="">Politicas de privacidad</a></p>
-
-                        <div class="form-group">
-                            <input type="submit" name="btnEnviar" class="btn btn-primary"><!--Es el botón que va a enviar el formulario completo-->
-                            <input type="reset" name="btnLimpiar" class="btn btn-info">
-                            
-                        </div>
-
-                    </form>
-                </div>
-                <h6 id="error"></h6>
-            </div>
-            <div class="col-sm-2">
-                <!--Columna para dar un espacio a la derecha-->
-
-            </div>
-
+            <!--Fin del formulario dentro del botón modal-->
+            <div id="olvidecontraseña" class="center-align"><a href=""> ¿Has olvidado tu contraseña?</a></div>
         </div>
-
+        <div class="modal-footer">
+            <a class="waves-effect waves-light btn-small"><i class="material-icons right">login</i>Ingresar</a>
+        </div>
     </div>
+    <!--Fin del boton modal-->
 
-    <script src="JS/javascript.js"></script><!-- aquí estoy llamando al archivo de javascript y trabajaremos con expresiones regulares-->
-    <!-- jQuery library -->
-    <!-- Todos los estilos van arriba aquí todos los javascripts esto es una buena practica -->
+    <!--javascript del boton modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    </script>
+    <!--Fin de javascript botón modal -->
+
+    <!--Nuevo formulario-->
+    <div class="container teal lighten-5" id="formincrip">
+        <h3 class="center">Registrarse</h3>
+        <br>
+        <div class="row">
+            <form class="col s10">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input placeholder="Ingrese su nombre" id="first_name" type="text" class="validate"
+                            name="first_name" maxlength="12" required>
+                        <label for="first_name">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" maxlength="12" required>
+                        <label for="last_name">Apellido</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Introduce tu Nombre de usuario " id="nombedeusuario" type="text"
+                            minlength="5" maxlength="15" required class="validate">
+                        <label for="first_name">Nombre de Usuario</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">alternate_email</i>
+                        <input id="email" type="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="password" type="password" class="validate" name="password" required>
+                        <label for="password">Contraseña</label>
+                        <p id="error"></p>
+                        <br>
+                        <div class="form-group1">
+                            <input id="boton-Restablecer" type="reset" name="btnLimpiar"
+                                class="btn btn-info waves-effect waves-light ">
+                        </div>
+                    </div>
+                    <p>Sus datos personales se utilizarán para procesar su pedido, respaldar su experiencia en este
+                        sitio web y para otros fines descritos en nuestras
+                        <a href="">Politicas de privacidad.</a>
+                    </p>
+                    <div class="form-group">
+                        <input id="boton-enviar" type="submit" name="btnEnviar"
+                            class="btn btn-primary white-text waves-effect waves-light ">
+                        <!--Es el botón que va a enviar el formulario completo-->
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Fin Nuevo formulario-->
+
+    <!--Boton flotante ubicado en la esquina inferior derecha que contiene herramientas  -->
+    <section>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li><a href="https://www.instagram.com/" class="btn-floating red"><i class="fab fa-instagram"></i>></a>
+                </li>
+                <li><a href="https://twitter.com/" class="btn-floating yellow darken-1"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/" class="btn-floating green"><i
+                            class="material-icons">facebook</i></a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.fixed-action-btn');
+                var instances = M.FloatingActionButton.init(elems);
+            });
+        </script>
+    </section>
+    <!-- Fin del Boton y codigo javascript flotante ubicado en la esquina inferior derecha que contiene herramientas-->
+
+    <!--Inicio Pie de página-->
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Accesos rapidos</h5>
+                    <p class="grey-text text-lighten-4">Pulse uno de nuestros accesos rapidos para ir directamente.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Accesos</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contacto y ayuda</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Terminos y condiciones</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Carrito</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2021 Mascota Land articulos de calidad
+            </div>
+        </div>
+    </footer>
+    <!--Fin pie de página-->
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="JS/javascript.js"></script>
+    <!-- aquí estoy llamando al archivo de javascript y trabajaremos con expresiones regulares-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

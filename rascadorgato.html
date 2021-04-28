@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camas para Mascotas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+
+<body>
+  <!--Inicio navbar-->
+  <nav>
+    <div class="nav-wrapper blue darken-2">
+      <a href="#!" class="brand-logo">
+        <div class="logo">
+          <img src="IMG/dog (4).png" width="60" alt="logo perro">
+        </div>
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <a class="waves-effect waves-light btn-small modal-trigger" href="#modal1">Iniciar sesión</a>
+        <a class="waves-effect waves-light btn-small modal-trigger" href="registrarse.html">Registrarse</a>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav blue lighten-4" id="mobile-demo">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Iniciar sesión</a></li>
+    <a class="waves-effect waves-light btn-small modal-trigger" href="registrarse.html">Registrarse</a>
+    <!--cambiamos por un boton modal-->
+  </ul>
+  <!--Fin navbar-->
+
+  <!--comienzo del javascript collapse responsive de nuestro navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems,);
+    });
+  </script>
+  <!--Fin del javascript collapse-->
+
+  <!--cuerpo del botón modal dentro del navbar -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <!--Comienzo del formulario dentro del botón modal-->
+      <h3 class="center">Iniciar sesión</h3>
+      <br>
+      <div class="row">
+        <form class="col s10">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person</i>
+              <input placeholder="Introduce tu Nombre de usuario " id="nombedeusuario" type="text" class="validate">
+              <label for="first_name">Nombre de Usuario</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" type="password" class="validate">
+              <label for="password">Contraseña</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--Fin del formulario dentro del botón modal-->
+      <div id="olvidecontraseña" class="center-align"><a href=""> ¿Has olvidado tu contraseña?</a></div>
+    </div>
+    <div class="modal-footer">
+      <a class="waves-effect waves-light btn-small"><i class="material-icons right">login</i>Ingresar</a>
+    </div>
+  </div>
+  <!--Fin del boton modal-->
+
+  <!--javascript del boton modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
+  <!--Fin de javascript botón modal -->
+
+  <!--Inicio de primera fila con posibles articulos de venta -->
+  <section id="camasmascotas">
+    <div class="row">
+      <h3 class="center-align cyan-text">Rascadores para Gato</h3>
+      <div class="col s12 m3 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/59-min.png">
+            <!--<span class="card-title">Correa para perro roja</span>-->
+            <!--Titulo dentro de la foto-->
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador para Gatos leopardo</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $50.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/72-min.png">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador para Gatos desierto</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $80.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/capturadepantalla2020-09-01alas21-53-231381.png">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador para Gatos picapiedras</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $50.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/f16429d8f93fb9497fc7ec8fb8c690f2.png">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador con juguete para Gatos</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $30.990</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin de la primera fila con posibles articulos de venta -->
+
+    <!--Inicio de la segunda fila con posibles articulos de venta -->
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/hu.png">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador simple para Gatos</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $100.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/images.jfif">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador lujoso para Gatos</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $200.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/rascador-300x300.jpg">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador simple con juguete para Gatos</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio: $130.990</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card teal accent-1">
+
+          <div class="card-image">
+            <img src="IMG/imagenes accesorios/rascador para gatitos/rascador-gato-02.jpg">
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <h5>Rascador con casita y juguete para Gatos</h5>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+              require little markup to use effectively.</p>
+            <h6 class="right align">Precio00.990</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Fin de segunda fila con posibles articulos de venta -->
+
+  <!--Boton flotante ubicado en la esquina inferior derecha que contiene herramientas  -->
+  <section>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a href="https://www.instagram.com/" class="btn-floating red"><i class="fab fa-instagram"></i>></a></li>
+        <li><a href="https://twitter.com/" class="btn-floating yellow darken-1"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/" class="btn-floating green"><i class="material-icons">facebook</i></a>
+        </li>
+        <li><a href="registrarse.html" class="btn-floating blue"><i class="material-icons">app_registration</i></a></li>
+      </ul>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems);
+      });
+    </script>
+  </section>
+  <!-- Fin del Boton y codigo javascript flotante ubicado en la esquina inferior derecha que contiene herramientas-->
+
+  <!--Inicio Pie de página-->
+  <footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Accesos rapidos</h5>
+          <p class="grey-text text-lighten-4">Pulse uno de nuestros accesos rapidos para ir directamente.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Accesos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Contacto y ayuda</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Terminos y condiciones</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Carrito</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2021 Mascota Land articulos de calidad
+      </div>
+    </div>
+  </footer>
+  <!--Fin pie de página-->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

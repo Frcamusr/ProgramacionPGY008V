@@ -58,27 +58,27 @@ alert(reg.test(texto)); //estamos testeando dentro de la variable texto si se en
 
 
 //Guardar el id del formulario y guardamos todos los imput del formulario
-var formulario = document.getElementById("formulario");//obtenemos el formulario completo y lo almacenamos en la variable formulario
-var inputs = document.querySelectorAll("#formulario input"); //obtenemos los inputs y los almacenamos dentro de la variable formulario
+var formincrip = document.getElementById("formincrip");//obtenemos el formulario completo y lo almacenamos en la variable formulario
+var inputs = document.querySelectorAll("#formincrip input"); //obtenemos los inputs y los almacenamos dentro de la variable formulario
 //ahora validamos nuestros input
 var expresiones = {  //Arreglo con expresiones//
-    txtNombre: /^[a-zA-Z]{3,10}$/,  //^ = Quiero que mi nombre no tenga espacios en blanco al principio. $ = ni al final. [a-zA-Z] quiero que tenga letras mayusculas y minusculas de la aA a la zZ. {3,10} = quiero que esto se repita minimo 3 veces y maximo 10 es decir que tenga entre 3 y 10 letras//
-    txtPass: /^.{6,12}$/, //{6,12} = que tenga entre 6 a 12 caracteres//
+    first_name: /^[a-zA-Z]{3,10}$/,  //^ = Quiero que mi nombre no tenga espacios en blanco al principio. $ = ni al final. [a-zA-Z] quiero que tenga letras mayusculas y minusculas de la aA a la zZ. {3,10} = quiero que esto se repita minimo 3 veces y maximo 10 es decir que tenga entre 3 y 10 letras//
+    password: /^.{6,12}$/, //{6,12} = que tenga entre 6 a 12 caracteres//
 }
 
 var validar = (e) => {
     switch ( e.target.name ) {
-        case "txtNombre":
+        case "first_name":
             console.log("NOMBRE")
             break;
-        case "txtPass":
+        case "password":
             //console.log("PASS")
-            if (expresiones.txtPass.test(e.target.value) ){
+            if (expresiones.password.test(e.target.value) ){
                 document.getElementById("error").innerHTML = "";
-                document.getElementById("txtPass").style.borderColor = "black";
+                document.getElementById("password").style.borderColor = "black";
             }else {
                 document.getElementById("error").innerHTML = "La contraseña debe contener entre 6 y 12 caracteres";
-                document.getElementById("txtPass").style.borderColor = "red";
+                document.getElementById("password").style.borderColor = "red";
             }
             break;
     }

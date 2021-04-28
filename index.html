@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
 
 </head>
 
@@ -17,13 +18,18 @@
     <!--Inicio navbar-->
     <nav>
         <div class="nav-wrapper blue darken-2">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#!" class="brand-logo">
+                <div class="logo">
+                    <img src="IMG/dog (4).png" width="60" alt="logo perro">
+                </div>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#categorias">Categorias</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <a class="waves-effect waves-light btn-small modal-trigger" href="#modal1">Iniciar sesión</a>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <a class="waves-effect waves-light btn-small modal-trigger" href="#iniciar-sesion">Iniciar sesión</a>
+                <a class="waves-effect waves-light btn-small modal-trigger" href="registrarse.html">Registrarse</a>
             </ul>
         </div>
     </nav>
@@ -31,8 +37,9 @@
     <ul class="sidenav blue lighten-4" id="mobile-demo">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="#categorias">Categorias</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Iniciar sesión</a></li>
+        <li><a href="#quienes-somos">Quienes Somos</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#iniciar-sesion">Iniciar sesión</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="registrarse.html">Registrarse</a></li>
         <!--cambiamos por un boton modal-->
     </ul>
     <!--Fin navbar-->
@@ -47,7 +54,7 @@
     <!--Fin del javascript collapse-->
 
     <!--cuerpo del botón modal dentro del navbar -->
-    <div id="modal1" class="modal">
+    <div id="iniciar-sesion" class="modal">
         <div class="modal-content">
             <!--Comienzo del formulario dentro del botón modal-->
             <h3 class="center">Iniciar sesión</h3>
@@ -72,16 +79,16 @@
                 </form>
             </div>
             <!--Fin del formulario dentro del botón modal-->
+
             <div id="olvidecontraseña" class="center-align"><a href=""> ¿Has olvidado tu contraseña?</a></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect waves-light btn-small"><i class="material-icons right">login</i>Ingresar</a>
         </div>
-
     </div>
-    <!--Fin del boton modal-->
+    <!--Fin del boton Iniciar sesión-->
 
-    <!--javascript del boton modal -->
+    <!--javascript del boton iniciar sesion -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.modal');
@@ -90,167 +97,190 @@
     </script>
     <!--Fin de javascript botón modal -->
 
+
     <!--Inicio del banner de la pagina-->
     <section class="banner">
         <div class="banner-img"></div>
-        <h1>Mascota Land</h1>
-        <h3>Wellcome!!</h3>
+        <h1 class="cyan-text">Mascota Land</h1>
+        <h3 class="light-blue-text">Wellcome!!</h3>
         <!--<a href="" class="banner-btn">Contacto</a>-->
     </section>
     <!--Fin del banner de la pagina-->
-    <section class="categorias" id="categorias">
-        <div class="container">
-            <!--Inicio de primera fila con posibles articulos de venta -->
-            
-                <div class="row">
-                    <h3 class="center-align">Categorias</h3>
-                    <div class="col s12 m6 l6 ">
-                        <div class="card">
-                            <div id="categoria1" class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="IMG/imagenes accesorios/correas para perro/correa2.jpg">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4 ">Correas para perro<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">Ver Productos</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Correas para perro<i
-                                        class="material-icons right">close</i></span>
-                                <p>Correas para perro, de excelente calidad y alta durabilidad, tenemos una gran
-                                    variedad de
-                                    tallas y colores para su mascotas.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l6 ">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator"
-                                    src="IMG/imagenes accesorios/Camas para perros/cama-termica-para-perros-xs-2.jpg">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Camas para mascotas<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">Ver Productos</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Camas para mascotas<i
-                                        class="material-icons right">close</i></span>
-                                <p>Camas para mascotas muy suaves y de excelente calidad tenemos de diferentes colores y
-                                    tamaños.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-
-                <!--Fin de la primera fila con posibles articulos de venta -->
-
-                <!--Inicio de la segunda fila con posibles articulos de venta -->
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator"
-                                    src="IMG/imagenes accesorios/ropa para animales/hamburg-special-dog-clothes-hot-dog-apparel.jpg">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Ropa para Mascotas<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">Ver Productos</a></p>
-                                <!--Inicio de boton circular rojo de añadir -->
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                        class="material-icons">add</i></a>
-                                <!--Fin de boton circular rojo de añadir -->
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Ropa para Mascotas<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.
-                                </p>
-                            </div>
-                        </div>
+    <!--Inicio de primera fila con posibles articulos de venta -->
+    <section id="categorias">
+        <div class="row">
+            <h3 class="center-align cyan-text">Categorias</h3>
+            <div class="col s6 m12 l6 ">
+                <div class="card teal accent-1">
+                    <div id="categoria1" class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="IMG/imagenes accesorios/correas para perro/correa2.jpg">
                     </div>
-                    <div class="col s12 m6 l6 ">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="IMG/imagenes accesorios/rascador para gatitos/72-min.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Rascadores para Gatos<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">Ver Productos</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Rascadores para Gatos<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 ">Correas Para Perro<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="correas.html">Ver Productos</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Correas Para Perro<i
+                                class="material-icons right">close</i></span>
+                        <p>Correas para perro, de excelente calidad y alta durabilidad, tenemos una gran
+                            variedad de
+                            tallas y colores para su mascotas.</p>
                     </div>
                 </div>
-            </section>
-            <!--Fin de segunda fila con posibles articulos de venta -->
-
-            <!--Boton flotante ubicado en la esquina inferior derecha que contiene herramientas  -->
-            <div class="fixed-action-btn">
-                <a class="btn-floating btn-large red">
-                    <i class="large material-icons">mode_edit</i>
-                </a>
-                <ul>
-                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                </ul>
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    var elems = document.querySelectorAll('.fixed-action-btn');
-                    var instances = M.FloatingActionButton.init(elems);
-                });
-            </script>
-            <!--Boton y codigo javascript flotante ubicado en la esquina inferior derecha que contiene herramientas-->
+
+            <div class="col s6 m12 l6 ">
+                <div class="card teal accent-1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                            src="IMG/imagenes accesorios/Camas para mascotas//cama-termica-para-perros-xs-2.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Camas Para Mascotas<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="camasmascotas.html">Ver Productos</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Camas Para Mascotas<i
+                                class="material-icons right">close</i></span>
+                        <p>Camas para mascotas muy suaves y de excelente calidad tenemos de diferentes colores y
+                            tamaños.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--Inicio Pie de página-->
-        <footer class="page-footer blue darken-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                            content.</p>
+        <!--Fin de la primera fila con posibles articulos de venta -->
+
+        <!--Inicio de la segunda fila con posibles articulos de venta -->
+        <div class="row">
+            <div class="col s6 m12 l6">
+                <div class="card teal accent-1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                            src="IMG/imagenes accesorios/ropa para animales/51vNWEHUj1L._AC_SX466_.jpg">
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Ropa Para Mascotas<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="ropamascotas.html">Ver Productos</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Ropa Para Mascotas<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked
+                            on.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <div class="col s6 m12 l6 ">
+                <div class="card teal accent-1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="IMG/imagenes accesorios/rascador para gatitos/72-min.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Rascadores Para Gatos<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="rascadorgato.html">Ver Productos</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Rascadores para Gatos<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked
+                            on.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <!--Fin pie de página-->
+        </div>
+    </section>
+    <!--Fin de segunda fila con posibles articulos de venta -->
+
+    <!--Inicio Parallax-->
+    <div id="quienes-somos" class="parallax-container" >
+        <div class="parallax"><img class="materialboxed" src="IMG/Imagenes parallax/Opcion1.jpg" ></div>
+        <h2 class="center-align cyan-text">Quienes Somos</h2>
+        <h5 class="titulo1">Calidad</h5>
+        <p class="parrafo1">Nos encargamos de vender los mejores accesorios para mascotas, libre de productos tóxicos y
+            de la mejorcalidad en el mercado</p>
+        <h5 class="titulo2">Eficiencia</h5>
+        <p class="parrafo2">Llevamos los productos directo a tu casa, estamos certificados con sellos de garantia y
+            devolución para que puedas relizar compras seguramente</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems,);
+        });
+    </script>
+    <!--Fin Parallax-->
+ <div class="teal accent-1">  
+    <h2 class="center cyan-text">Estamos ubicados en</h2>
+    <div class="center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.190091360862!2d-70.57857902404234!3d-33.59838223133895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x893f58a1479b8f82!2sDuoc%20UC%3A%20Sede%20Puente%20Alto!5e0!3m2!1ses-419!2s!4v1618250054417!5m2!1ses-419!2s" width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+    <!--Boton flotante ubicado en la esquina inferior derecha que contiene herramientas  -->
+    <section>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li><a href="https://www.instagram.com/" class="btn-floating red"><i class="fab fa-instagram"></i>></a>
+                </li>
+                <li><a href="https://twitter.com/" class="btn-floating yellow darken-1"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/" class="btn-floating green"><i
+                            class="material-icons">facebook</i></a></li>
+                <li><a href="registrarse.html" class="btn-floating blue"><i
+                            class="material-icons">app_registration</i></a></li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.fixed-action-btn');
+                var instances = M.FloatingActionButton.init(elems);
+            });
+        </script>
+    </section>
+    <!-- Fin del Boton y codigo javascript flotante ubicado en la esquina inferior derecha que contiene herramientas-->
+
+    <!--Inicio Pie de página-->
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Accesos rapidos</h5>
+                    <p class="grey-text text-lighten-4">Pulse uno de nuestros accesos rapidos para ir directamente.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Accesos</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contacto y ayuda</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Terminos y condiciones</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Carrito</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2021 Mascota Land articulos de calidad
+            </div>
+        </div>
+    </footer>
+    <!--Fin pie de página-->
 
 
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
 </body>
 
 </html>

@@ -6,19 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif; /*Font-family = familia tipográfica /*cambiamos el tipo de letra*/
-    background-color: rgb(243, 237, 223); /*background-color = color de fondo*/
-}
-
-nav {
-    list-style: none; /*list-style = estilo de la lista /*le borramos los puntos de lista*/   
-}
-
-a {
-    text-decoration: none; /*le borramos la linea de link*/
-    cursor: pointer; /*que aparezca una mano al pasar el mouse por el link*/
-    font-size: 20px; /*Tamaño de fuente*//*agrandamos la letra*/
-    font-weight: bold; /*font-weight = peso de la fuente ; /*letra en negrita*/
-    color: white;
+    background-color: rgb(40, 75, 72); /*background-color = color de fondo*/
 }
 
 p {
@@ -29,65 +17,7 @@ ul {
     list-style: none;
 }
 
-/* HEADER */
-header {
-    /* FLEX */ /*nuestro header sera ahora un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    justify-content: space-between; /*que los elementos tengan espacio entre sí*/
-    align-items: center; /*que los elementos esten centrados en la linea*/
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*quiero que ocupe el 100% de la página*/
-    padding: 40px 100px; /*quiero 40px de margen hacia adentro en los lados y 100 pixeles arriba y abajo  */
-    color: white;
-    z-index: 10;   /*tenia la terrible capa 8 le ponia px al final*/
-}
-
-header nav {
-    /* FLEX */ /*nuestro header nav sera ahora un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;  
-}
-
-header nav li { /*editando la lista*/
-    margin: 0 20px; /*quiero 15pixeles de separación */
-    margin-right: 0px;
-    
-}
-
-/* responsive */
-@media (max-width:1000px) { /*cuando tenga 1000pixeles el padding va a cambiar*/
-    header {
-        padding: 20px 50px;
-    }
-}
-
-@media (max-width:800px){ /*cuando mi pagina este en formato de 800px quedara en formato de columna*/
-    header {
-        flex-direction: column;
-    }
-
-    header nav {
-        margin-top: 10px;
-    }
-
-    header .logo img {
-        width: 60%
-    }
-
-    header nav li a {
-        font-size: 19px;
-    }
-}
 
 /* Banner */
 section {
@@ -100,7 +30,7 @@ section {
 
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    
 }
 
 .banner {/*Pagina de inicio*/
@@ -118,8 +48,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../IMG/saltando\ perros\ gatos.jpg'); /*595*/
-    /*background-size: 1275px 565px;*/
+    background-image: url('../IMG/saltando\ perros\ gatos.jpg');
     background-size: 1262px 573px; /*background-size significa tamaño del fondo*/ /* cover Quiero que la imagen ocupe todo el espacio */
     z-index: -1; /*Quiero que la imagen quede en la posición z -1 */
 }
@@ -134,57 +63,74 @@ section {
     opacity: .5;  /*por defecto = 5*/
     content: '';    
 }
+/*inicio sección de imagen categorias */
+#categorias img {
+    height: 300px;
+    width: 450px;
+}  
+/*Fin sección de imagen categoris/
 
-.banner h1 {
-    margin-bottom: 15px; /*margen inferior*/
-    font-size: 45px; /*tamaño de la letra*/
+/*inicio sección de imagen y card camas para mascotas*/
+#camasmascotas img {
+    height: 180px;
+    width: 300px;
 }
 
-.banner h2 {
-    margin-bottom: 40px; /*margen inferior*/
-    font-size: 22px; /*tamaño de la letra*/   
-}
+#camasmascotas .card {
+   /* FLEX */ /*nuestro header nav sera ahora un contenedor flexible*/
+   display: -webkit-flex; /*compatible con chrome y safari*/
+   display: -moz-flex; /*compatible con mozila*/
+   display: -ms-flex; /*compatible con Internet explorer edge*/
+   display: -o-flex; /*compatible con opera*/
+   display: flex;
 
-.banner a.banner-btn { /*Botón contacto */
-    text-transform: uppercase; /*Quiero que este en mayusculas*/
-    padding: 15px 30px;
-    background: crimson;
-    border-radius: 50px;
+   flex-direction: column;
+   width: 300px;
+   height: 420px; 
 }
+/*Fin sección de imagen y card camas para mascotas*/
 
-/* responsive */
-@media (max-width:1000px) { /*cuando tenga 1000pixeles el padding va a cambiar*/
-    section {
-        padding: 100px 50px;
+@media (max-width:400) {
+    #categorias img {
+        background-size: 900px 900px;
     }
 }
 
+
+/* Inicio Seccción de correas para perro Card e Imagen*/
+#correas .card { 
+    /* FLEX */ /*nuestro header nav sera ahora un contenedor flexible*/
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    flex-direction: column;
+    width: 300px;
+    height: 420px;
+}
+
+#correas img {
+    height: 180px;
+    width: 300px;
+    
+}
+/*Fin sección correas para perro Card e imagen*/
 
 @media (max-width:800px) { /*cuando tenga 800pixeles el padding va a cambiar*/
-    section {
-        padding: 130px 50px;
-    }
-
     .banner .banner-img {
         background-size: 730px 500px;
     }
 }
 
-@media (max-width:900px) { /*cuando tenga 800pixeles el padding va a cambiar*/
-    section {
-        padding: 130px 50px;
-    }
-
+@media (max-width:900px) { /*cuando tenga 800pixeles el padding va a cambiar*/   
     .banner .banner-img {
         background-size: 900px 500px;
     }
 }
 
 @media (max-width:700px) { /*cuando tenga 800pixeles el padding va a cambiar*/
-    section {
-        padding: 130px 50px;
-    }
-
     .banner .banner-img {
         background-size: 680px 500px;
     }
@@ -202,297 +148,16 @@ section {
     .banner h2 {
         font-size: 15px;
     }
-
-    .banner a.banner-btn {
-        font-size: 15px;
-        padding: 15px 30px;
-    }
-
+    
     .banner .banner-img { /*hacemos responsive la imagen de fondo*/
         background-size: 600px 600px;
     }
 }
 
-/*categorias*/
-.categorias-contenido {
-    /* FLEX */ /*nuestra sección ahora sera un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.categorias-titulo {
-    font-size: 50px;
-    text-transform: uppercase;
-    margin-bottom: 5%;
-}
-
-.categorias-contenido li { 
-    padding: 20px;
-    height: 200px;
-    background-size: 500px 500px;
-    background-clip: content-box;
-    background-position: center;
-}
-
-.categorias-izq { /*imagen de los gatos blancos*/
-    flex-basis: 20%; /*con flex-basis = decimos que se amolde dentro del contenedor que tiene*/
-    /*background-image: url('../IMG/correa1.jpg');*/
-    
-}
-
-.categorias-der {
-    flex-basis: 30%;
-}
-
-.categorias-contenido h2 {
-    margin-bottom: 2%;
-}
-
-.categorias-contenido p {
-    margin-bottom: 25px;
-    text-align: left;
-    padding-left: 0;
-    text-align: justify;
-}
-
-.categorias-btn {
-    text-transform: uppercase; /*Quiero que este en mayusculas*/
-    padding: 15px 30px;
-    background: crimson;
-    border-radius: 50px;
-}
-
-
-
-/* Responsive */
-@media (max-width:800px) {
-    .categorias-izq, .sobremi-der { /*Cuando queramos poner más de un elemento en media tenemos que separar por coma*/ 
-        flex-basis: 100%;
-    }
-
-    .categorias-contenido p {
-        text-align: justify;
-    }
-
-    .categorias-contenido li {
-        padding: 10px;
-    }
-
-    .categorias-der {
-        text-align: center;
-    }
-}
-
-/*SECCIÓN DE productos*/
-#servicios {
-    background-color: aquamarine;
-}
-
-.servicios-contenido {
-    /* FLEX */ /*ahora sera un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-.servicios-contenido li {
-    flex-basis: 33%;
-    text-align: center;
-    padding: 0 30px; /*margen interno 0 al los lados, 30 arriba*/ 
-}
-
-.servicios-contenido li i {
-    margin-bottom: 20px;
-    font-size: 50px;
-    color: crimson;
-}
-
-.servicios-contenido li h4{
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-
-.servicios-titulo {
-    margin-bottom: 4%;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-/* Responsive */
-@media (max-width:800px) {
-    .servicios-titulo {
-        font-size: 40px;
-        margin-bottom: 8%;
-    }
-
-    .servicios-contenido li {
-        flex-basis: 100%;
-        margin-bottom: 30px;
-    }
-}
-
-/* Formulario */
-input[type="text"], input[type="date"], input[type="file"], input[type="number"], input[type="password"]{ /*le estamos dando un estilo a cada uno de los input o datos de entrada*/
-    width: 100%; /*que tenga un ancho del 100% y sera del ancho del contenedor div id= "formulario"*/ 
-    border-radius: 5px; /*le damos un borde a nuestro input*/
-    padding: 10px; /*margen hacia dentro*/
-    margin-top: 5px;
-    margin-bottom: 15px; /*quiero que el margen hacia abajo sea de 15 pixeles*/
-    box-sizing: border-box; /*quiero que tenga un borde*/
-    border: 1px solid gray; /*quiero que el borde tenga un color*/
-    resize: vertical; /*ordenara todos los input en formato vertical*/   
-    font-size: 20px; /*cambio el tamaño de la letra de ingreso de datos*/
-    
-} 
-/*Formulario*/
-#Formulario { /*se antecede de un gato*/ /*ancho del formulario*/
-    width: 70%; /*este formulario quiero que sea el 80% de la pagina completa*/
-    margin: auto; /*da margen parejo al div del formulario a los cuatro lados*/
-    padding: 20px; /*margen interno*/
-    background-color: rgb(163, 231, 228);
-    border-radius: 7px;   
-    height: 60%;
-}
-
-.btn {
-    border: none;
-    cursor: pointer;  /*cursor con apariencia de mano cuando pasamos por encima*/ 
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-.btnverde {
-    background-color: rgb(32, 110, 78);   
-}
-
-.btnverde:hover{
-    background-color: rgb(15, 92, 36);   
-}
-
-.btnazul {
-    background-color: rgb(21, 196, 181);    
-}
-
-.btnazul:hover{
-    background-color: rgb(70, 111, 128);    
-}
-/*FIn estilo del formulario*/
-
-/*Contacto*/
-.ingresar-contenido {
-    /* FLEX */ /*ahora sera un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.ingresar-titulo {
-    font-size: 50px;
-    margin-bottom: 5%; /*entre tres a cinco % queda bueno*/
-    text-transform: uppercase;
-}
-
-.ingresar-contenido li {
-    height: 600px; /*600 pixeles de alto*/
-    padding: 20px;
-    list-style: none;
-}
-
-.ingresar-izq {
-    flex-basis: 50%; /*quiero que ocupe el 50% izquierdo de toda la pagina*/
-}
-
-.ingresar-der {
-    flex-basis: 50%; /*quiero que ocupe el 50% derecho de toda la pagina*/
-    
-}
-.ingresar-der h2 {
-    list-style: none;
-}
-
-.ingresar-der .crearcuenta-btn {
-    /*text-transform: uppercase; /*Quiero que este en mayusculas*/
-    padding: 10px 20px;
-    background: rgb(105, 194, 87);
-    border-radius: 50px;
-    margin-left: 120px;
-    margin-top: 100px;
-}
-
-.ingresar-der .crearcuenta-btn:hover {
-    background-color: rgb(21, 167, 65);
-}
-
-.ingresar-izq .restaurarcontraseña {
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    font-weight: bold; /*tipos de letra*/
-    margin-left: 65px;
-    font-size: 17px;
-    color: black;
-}
-
-.ingresar-izq .restaurarcontraseña:hover {
-    color: rgb(100, 83, 248);
-}
-
-.ingresar-izq .iniciarsesion-btn {
-
-    /* FLEX */ /*ahora sera un contenedor flexible*/
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    /*text-transform: uppercase; /*Quiero que este en mayusculas*/
-    padding: 10px 20px;
-    background: rgb(139, 158, 240);
-    border-radius: 10px;
-    width: 50%;
-    margin-top: 40px;
-    margin-left: 90px;   
-}
-
-.ingresar-izq .iniciarsesion-btn:hover {
-    background-color: rgb(100, 83, 248);
-}
 
 
 
 
-/* Footer */
-footer { /*Las etiquetas solo se llaman con el nombre*/ /*con el punto son clases y cuando se usa el gato# es para usar el ID 
-   /* FLEX */ /*ahora sera un contenedor flexible*/
-   display: -webkit-flex; /*compatible con chrome y safari*/
-   display: -moz-flex; /*compatible con mozila*/
-   display: -ms-flex; /*compatible con Internet explorer edge*/
-   display: -o-flex; /*compatible con opera*/
-   display: flex;
-   flex-direction: column; /*Para que nos quede en formato de columna en el medio*/
-   align-items: center; /*Un solo elemento*/
-   text-align: center; /*que nos quede centrado*/
-   background-color:  black;
-   color: white;
-   padding: 40px;
-}
 
 #formulario p a {
     color: black;
@@ -504,16 +169,7 @@ footer { /*Las etiquetas solo se llaman con el nombre*/ /*con el punto son clase
     color: rgb(95, 145, 103);
 }
 
-#texto_jumbotron {
-    display: -webkit-flex; /*compatible con chrome y safari*/
-    display: -moz-flex; /*compatible con mozila*/
-    display: -ms-flex; /*compatible con Internet explorer edge*/
-    display: -o-flex; /*compatible con opera*/
-    display: flex;
-    margin-left: 430px;
-    
 
-}
 /*Link de las tarjetas*/
 .card-content p a {
     color: rgb(104, 92, 92);
@@ -535,4 +191,127 @@ footer { /*Las etiquetas solo se llaman con el nombre*/ /*con el punto son clase
 }
 /*Fin Boton has olvidado tu contraseña? */
 
+#formincrip .modal-footer {
+    /* FLEX */ /*nuestro header nav sera ahora un contenedor flexible*/
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
 
+    margin-left: 700px;
+    margin-bottom: 10px;
+}
+
+#formincrip .modal-footer a {
+    /* FLEX */ /*nuestro header nav sera ahora un contenedor flexible*/
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    margin-bottom: 10px;
+    
+    
+    
+}
+
+#formincrip {
+    border-radius: 15px; /*borde redondeado*/
+    border: 2px solid rgb(103, 253, 3);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    
+}
+
+#formincrip p {
+   margin-left: 50px;
+    
+}
+
+#formincrip #error {
+    font-size: 14px;
+    color: red;
+}
+
+#formincrip .form-group {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    margin-left: 610px;
+    margin-top: 30px;
+    
+}
+
+#formincrip .form-group1 {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+   margin-left: 45px;
+   color: white;
+}
+/*Inicio parrafo 1 mas titulo*/
+.parallax-container .parrafo1 {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    margin-bottom: ;
+    margin-left: 1000px;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.parallax-container .titulo1 {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    margin-left: 1070px;
+}
+/*Fin parrafo 1 mas titulo*/
+
+
+/*Inicio parrafo 2 mas titulo*/
+.parallax-container .parrafo2 {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+    margin-right: 980px;
+    margin-bottom: 100px;
+    padding-left: 10px;
+}
+
+.parallax-container .titulo2 {
+    display: -webkit-flex; /*compatible con chrome y safari*/
+    display: -moz-flex; /*compatible con mozila*/
+    display: -ms-flex; /*compatible con Internet explorer edge*/
+    display: -o-flex; /*compatible con opera*/
+    display: flex;
+
+   margin-left: 60px;
+}
+
+/*Fin parrafo 2 mas titulo*/
+
+@media (max-width:700px) {
+    .parallax-container .titulo2 {
+        margin-left: 1000px;
+    }
+}
